@@ -1,0 +1,210 @@
+<html>
+     <head>
+	     <title>CocodyShop </title> 
+
+        <!-- <link rel="stylesheet" src="jq/jquery.mobile-1.0.1.min.css" /> 
+		 <script type="text/javascript" src="jq/jquery-1.6.4.min.js"></script>
+		 <script type="text/javascript" src="jq/jquery.mobile-1.0.1.min.js"></script>  -->
+		 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+         <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+         <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+		 
+         <script type="text/javascript" src="function.js"></script> 
+		 <script type="text/javascript" src="liste_client.js"></script>
+	 </head>
+     <body>	
+         <div data-role="page" id="gestionCommande" data-position="fixed">
+		 
+             <div data-role="header" data-theme="a" data-position="fixed">
+                 <h1>CocodyShop</h1>
+             </div>
+			 
+			 
+             <div data-role="content">
+			      <div data-role="navbar">
+				     <ul>
+					     <li> <a href="#gestionCommande" data-role="button">LISTE DES CLIENTS</a> </li>
+					     <li> <a href="#enregistrement" data-role="button">ENREGISTREMENT COMMANDES</a> </li>
+					  <li> <a href="#livraison" data-role="button">VALIDER LA LIVRAISON</a> </li>
+					 </ul>
+				  </div>
+                 <p>
+				 <p class="center">
+                     <img src="images.jpg" alt="CocodyShop" width="320" height="89" />
+                 </p>
+     
+                     <p>LA LISTE DES CLIENTS</p>
+
+				 
+				 
+				 <div data-role="collapsible-set" id="listeClient">
+   
+
+                 </div>
+				 
+             </div>
+			 
+			 
+			 <div data-role="footer" data-theme="e" data-position="fixed" data-id="foot">
+				  <div data-role="navbar">
+				     <ul>
+					     <li> <a classe="ui-btn-active ui-state-persist" href="#gestionCommande" data-role="button">LISTE DES CLIENTS</a> </li>
+					     <li> <a href="#enregistrement" data-role="button">ENREGISTREMENT COMMANDES</a> </li>
+					    <li> <a href="#livraison" data-role="button">VALIDER LA LIVRAISON</a> </li>
+					 </ul>
+				  </div>
+             </div> 
+			 
+         </div>
+		  
+
+        <div data-role="page" id="enregistrement" data-position="fixed">
+
+
+             <div data-role="header" data-theme="a" data-position="fixed">
+                 <h1>CocodyShop</h1>
+				 <a id="btn-back" data-role="button" data-rel="back" data-transition="slide" 
+				 data-icon="arrow-l" data-iconpos="left" class="ui-btn-left ui-btn ui-icon-arrow-l  ui-corner-all ui-btn-icon-notext"  > Retour </a> 
+             </div>
+			 
+             <div data-role="content">
+			      <div data-role="navbar">
+				     <ul>
+					     <li> <a href="#gestionCommande" data-role="button">LISTE DES CLIENTS</a> </li>
+					     <li> <a href="#enregistrement" data-role="button">ENREGISTREMENT COMMANDES</a> </li>
+					   <li> <a href="#livraison" data-role="button">VALIDER LA LIVRAISON</a> </li>
+					 </ul>
+				  </div>
+                 <p>
+
+				 
+				 <form id="formulaire" autocomplete="off" enctype="multipart/form-data" method="post"  name="form">
+                     <H3>ENREGISTREMENT D'UNE NOUVELLE COMMANDE</H3>
+                         Nom et Prenom: <input type="text" name="nom_client">
+                            <P>
+						 Téléphone: <input type="text" name="tel_client">
+                         <P>
+						 Marque de la voiture: <input type="text" name="marque_voiture">
+                         <P>
+						 Modele de la voiture: <input type="text" name="modele_voiture">
+                         <P>
+						 Année de la voiture: <input type="text" name="annee_voiture">
+                         <P>
+                         <h3>NOS DIFFERENTS PRODUITS:</h3>
+						     <P>
+							 <div data-role="fieldcontain">
+				                CAMERA:
+				                 <select name="produit1" id="slider2" data-role="slider">
+					                  <option value="off">OUI</option>
+					                  <option value="on">NON</option>
+				                 </select>
+			                 </div>
+							  <div data-role="fieldcontain">
+				                TRAQUEUR:
+				                 <select name="produit2" id="slider2" data-role="slider">
+					                  <option value="off">OUI</option>
+					                  <option value="on">NON</option>
+				                 </select>
+			                 </div>
+							  <div data-role="fieldcontain">
+				                RADIO-DVD:
+				                 <select name="produit3" id="slider2" data-role="slider">
+					                  <option value="off">OUI</option>
+					                  <option value="on">NON</option>
+				                 </select>
+			                 </div>
+							  <div data-role="fieldcontain">
+				                JAUGE:
+				                 <select name="produit4" id="slider2" data-role="slider">
+					                  <option value="off">OUI</option>
+					                  <option value="on">NON</option>
+				                 </select>
+			                 </div>	
+                              <P>
+							  DATE LIVRAISON PREVUE<input type="date" name="date_livraison_prevue">
+							  <P>
+							  DATE LIVRAISON EFFECTIVE<input type="date" name="date_livraison_effect">
+							  <P>
+							   <div data-role="fieldcontain">
+				                SITUATION DE LA COMMANDE:
+				                 <select name="situation_commande" id="slider2" data-role="slider">
+					                  <option value="off">LIVREE</option>
+					                  <option value="on">NON LIVREE</option>
+				                 </select>
+			                 </div>
+                            <input id="envoyer" type="submit" value="Valider"> 
+                            <input type="reset" value="Annuler">
+                     </form></p>
+					 <div id="post"></div>
+             </div>
+			 
+			 
+			 <div data-role="footer" data-theme="e" data-position="fixed" data-id="foot">
+				  <div data-role="navbar">
+				     <ul>
+					     <li> <a href="#gestionCommande" data-role="button">LISTE DES CLIENTS</a> </li>
+					     <li> <a classe="ui-btn-active ui-state-persist" href="#enregistrement" data-role="button">ENREGISTREMENT COMMANDES</a> </li>
+					   <li> <a href="#livraison" data-role="button">VALIDER LA LIVRAISON</a> </li>
+					 </ul>
+				  </div>
+             </div> 
+
+
+        </div>
+		
+		
+		
+		<div data-role="page" id="livraison" data-position="fixed">
+		 
+             <div data-role="header" data-theme="a">
+                 <h1>CocodyShop</h1>
+				 <a id="btn-back" data-role="button" data-rel="back" data-transition="slide" 
+				 data-icon="arrow-l" data-iconpos="left" class="ui-btn-left ui-btn ui-icon-arrow-l  ui-corner-all ui-btn-icon-notext"  > Retour </a> 
+             </div>
+			 
+			 
+             <div data-role="content">
+			      <div data-role="navbar">
+				     <ul>
+					     <li> <a href="#gestionCommande" data-role="button">LISTE DES CLIENTS</a> </li>
+					     <li> <a href="#enregistrement" data-role="button">ENREGISTREMENT COMMANDES</a> </li>
+					     <li> <a href="#livraison" data-role="button">VALIDER LA LIVRAISON</a> </li>
+					 </ul>
+				  </div>
+                 <p>
+				 <form id="formlivraison" autocomplete="off" enctype="multipart/form-data" method="post"  name="livraison">
+                         <H3>LIVRAISON DEFINITIF DE LA COMMANDE</H3>  
+						 Numero Commande: <input type="text" name="id_commande"  id="id_commande">
+                         <P>
+						
+							   <div data-role="fieldcontain">
+				                SITUATION DE LA COMMANDE:
+				                 <select name="situation_commande" id="slider2" data-role="slider">
+					                  <option value="off">LIVREE</option>
+					                  <option value="on">NON LIVREE</option>
+				                 </select>
+			                 </div>
+                            <input id="valider" type="submit" value="Valider"> 
+                            <input type="reset" value="Annuler">
+                     </form>
+					 
+					 </p>
+					 <div id="postlivraison"></div>
+				 
+             </div>
+			 
+			 
+			 <div data-role="footer" data-theme="e" data-position="fixed" data-id="foot">
+				  <div data-role="navbar">
+				     <ul>
+					     <li> <a classe="ui-btn-active ui-state-persist" href="#gestionCommande" data-role="button">LISTE DES CLIENTS</a> </li>
+					     <li> <a href="#enregistrement" data-role="button">ENREGISTREMENT COMMANDES</a> </li>
+					     <li> <a href="#livraison" data-role="button">VALIDER LA LIVRAISON</a> </li>
+					 </ul>
+				  </div>
+             </div> 
+			 
+         </div>
+
+     </body>	
+</html>	 
