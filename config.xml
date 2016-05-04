@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.kamatech.cocodyshop"
+    version   = "1.0.0">
+
+<name>CocodyShop</name>
+
+<description>
+CocodyShop est un outils de commande en ligne
+</description>
+
+<author href="www.kamatech.ci" email="gorbiromaric@gmail.com">
+Kamatech
+</author>
+<icon src="geolocation.png" />
+<icon src="geolocation.png" gap:platform="android" gap:qualifier="ldpi" />
+<gap:splash src="demarrage_portrait.jpg" />
+<gap:splash src="demarrage_portrait.jpg" gap:platform="android" gap:qualifier="port-xxhdpi" />
+<gap:splash src="dreamtecklogo.jpg" gap:platform="android" gap:qualifier="land-xxhdpi" />
+<gap:splash src="dreamtecklogo.jpg" gap:platform="winphone" />
+<gap:splash src="dreamtecklogo.jpg" gap:platform="ios" width="320" height="480" />
+<access origin="*" />
+</widget>
